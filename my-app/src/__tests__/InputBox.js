@@ -10,6 +10,13 @@ describe("UI test for Input",()=>{
         expect(inputElement).toBeInTheDocument();
         expect(inputElement).toHaveAttribute("type","text");
     })
+
+    //getByDisplyValue matches the value attribute as mentioned in the query
+    test("Testing for input Element",()=>{
+        render(<InpuBox/>);
+        const inputElement=screen.getByDisplayValue("username");
+        expect(inputElement).toBeInTheDocument();
+    })
 })
 
 
